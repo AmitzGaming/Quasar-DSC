@@ -1,5 +1,6 @@
 # Quasar Deadshot Client
 
+It is a Fork version of Quasar-DSC Updated to work in 2026
 Introducing the best client for [Deadshot.io](https://deadshot.io/) that exists and will ever exist!
 
 **Edit:** Please not that this client is very buggy because we never finished it! And also this repo is now archived. It was fun while it lasted!
