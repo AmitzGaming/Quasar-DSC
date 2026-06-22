@@ -209,14 +209,15 @@ app.whenReady().then(() => {
 
       win.setMenuBarVisibility(false);
       win.$ = win.jQuery = require('jquery/dist/jquery.min.js');
-      win.loadURL('https://deadshot.io');
+      const chromeUserAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36';
+      win.loadURL('https://deadshot.io', { userAgent: chromeUserAgent });
 
       if (jsonobj.Colorblindmode) {
         win.webContents.send('colorblinddata', jsonobj.ColorblindmodeColor);
       }
     
       // some shortcuts
-      globalShortcut.register('F6', () => win.loadURL('http://deadshot.io/'));
+      globalShortcut.register('F6', () => win.loadURL('http://deadshot.io/', { userAgent: chromeUserAgent }));
       globalShortcut.register('F5', () => win.reload());
       globalShortcut.register('Escape', () => win.webContents.executeJavaScript('document.exitPointerLock()', true));
       globalShortcut.register('F7', () => {
